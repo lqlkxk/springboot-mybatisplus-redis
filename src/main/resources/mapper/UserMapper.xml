@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.inphase.imccp.demo.mapper.UserMapper">
+    <select id="selectUserList" resultType="com.inphase.imccp.demo.entity.TbUser">
+        select id,name,age,date_format(birth ,'%Y-%m-%d %H:%i:%s') birth from tb_user
+    </select>
+
+    <resultMap id="userMap" type="com.inphase.imccp.demo.entity.TbUser">
+        <result column="id" property="id"  jdbcType="INTEGER"/>
+        <result column="name" property="name"  jdbcType="VARCHAR"/>
+        <result column="age" property="age"  jdbcType="INTEGER"/>
+        <result column="birth" property="birth"  jdbcType="TIMESTAMP"/>
+    </resultMap>
+</mapper>
