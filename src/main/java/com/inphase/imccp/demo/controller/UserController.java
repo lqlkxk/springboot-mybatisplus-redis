@@ -32,6 +32,11 @@ public class UserController {
         return ResponseMsg.success(userService.selectUserList());
     }
 
+    @GetMapping("findAll")
+    public ResponseMsg findAll() {
+        return ResponseMsg.success(userService.selectList(null));
+    }
+
     @GetMapping("writeToRedis")
     public ResponseMsg writeToRedis() {
         List<TbUser> users = userService.selectUserList();

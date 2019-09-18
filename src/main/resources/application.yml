@@ -20,7 +20,7 @@ spring:
       url: 127.0.0.1
       port: 6379
       password:
-# mybatis≈‰÷√
-mybatis:
+# mybatis plus≈‰÷√
+mybatis-plus:
   mapper-locations: classpath:mapper/*Mapper.xml
   type-aliases-package: com.inphase.imccp.demo.entity

@@ -1,7 +1,8 @@
 package com.inphase.imccp.demo.mapper;
 
+import com.baomidou.mybatisplus.mapper.BaseMapper;
 import com.inphase.imccp.demo.entity.TbUser;
-import org.springframework.stereotype.Repository;
+import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
@@ -12,7 +13,7 @@ import java.util.List;
  * @Since 1.0
  * @Date 2019/9/18 0018
  */
-@Repository
-public interface UserMapper  {
+@Mapper
+public interface UserMapper extends BaseMapper<TbUser> {
     List<TbUser> selectUserList() ;
 }

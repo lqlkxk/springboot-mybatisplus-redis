@@ -1,5 +1,6 @@
 package com.inphase.imccp.demo.service.impl;
 
+import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import com.inphase.imccp.demo.entity.TbUser;
 import com.inphase.imccp.demo.mapper.UserMapper;
 import com.inphase.imccp.demo.service.UserService;
@@ -16,7 +17,7 @@ import java.util.List;
  * @Date 2019/9/18 0018
  */
 @Service
-public class UserServiceImpl implements UserService {
+public class UserServiceImpl  extends ServiceImpl<UserMapper, TbUser> implements UserService {
 
     @Resource
     UserMapper userMapper;

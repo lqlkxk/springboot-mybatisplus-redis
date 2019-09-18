@@ -1,5 +1,6 @@
 package com.inphase.imccp.demo.service;
 
+import com.baomidou.mybatisplus.service.IService;
 import com.inphase.imccp.demo.entity.TbUser;
 
 import java.util.List;
@@ -13,7 +14,7 @@ import java.util.List;
  * 　　* @date $ $
  *
  */
-public interface UserService {
+public interface UserService  extends IService<TbUser> {
 
     /**
      * 查询用户列表

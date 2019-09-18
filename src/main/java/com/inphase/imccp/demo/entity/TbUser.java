@@ -1,5 +1,6 @@
 package com.inphase.imccp.demo.entity;
 
+import com.baomidou.mybatisplus.annotations.TableName;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
@@ -17,6 +18,7 @@ import java.sql.Date;
  * @Date 2019/9/18 0018
  */
 @Data
+@TableName("tb_user")
 public class TbUser implements Serializable {
 
     private static final long serialVersionUID = 1L;
